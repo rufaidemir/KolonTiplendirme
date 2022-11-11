@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Projects/PythonProjects/KOLONTIP/KolonTip.ui'
+# Form implementation generated from reading ui file 'C:/Projects/PythonProjects/KOLONTIP/KolonTip/KolonTip.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(765, 571)
+        MainWindow.resize(761, 534)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -149,10 +149,145 @@ class Ui_MainWindow(object):
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
         MainWindow.setPalette(palette)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icons/history.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.groupBox_11 = QtWidgets.QGroupBox(self.centralwidget)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.groupBox_11.setFont(font)
+        self.groupBox_11.setStyleSheet(" QGroupBox {\n"
+"     \n"
+"     border: 2px solid gray;\n"
+"     border-radius: 5px;\n"
+"     margin-top: 1ex; /* leave space at the top for the title */\n"
+" }\n"
+"\n"
+" QGroupBox::title {\n"
+"     subcontrol-origin: margin;\n"
+"     subcontrol-position: top center; /* position at the top center */\n"
+"     padding: 0 3px;\n"
+"    color:white;\n"
+" }")
+        self.groupBox_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.groupBox_11.setFlat(False)
+        self.groupBox_11.setCheckable(False)
+        self.groupBox_11.setObjectName("groupBox_11")
+        self.gridLayout_8 = QtWidgets.QGridLayout(self.groupBox_11)
+        self.gridLayout_8.setObjectName("gridLayout_8")
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.label_63 = QtWidgets.QLabel(self.groupBox_11)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_63.setFont(font)
+        self.label_63.setToolTipDuration(-1)
+        self.label_63.setStyleSheet("color:rgb(255, 255, 255);")
+        self.label_63.setScaledContents(True)
+        self.label_63.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_63.setObjectName("label_63")
+        self.gridLayout.addWidget(self.label_63, 0, 0, 1, 1)
+        self.label_combinations_6 = QtWidgets.QLabel(self.groupBox_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_combinations_6.sizePolicy().hasHeightForWidth())
+        self.label_combinations_6.setSizePolicy(sizePolicy)
+        self.label_combinations_6.setMinimumSize(QtCore.QSize(120, 30))
+        self.label_combinations_6.setMaximumSize(QtCore.QSize(16777215, 40))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_combinations_6.setFont(font)
+        self.label_combinations_6.setStyleSheet("QLabel{\n"
+"     padding:8px;\n"
+"padding-top:10px;\n"
+"padding-bottom:10px;\n"
+"    color:white;\n"
+"    border-left:0.5px solid;\n"
+"    border-color:white;\n"
+"\n"
+"}")
+        self.label_combinations_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_combinations_6.setObjectName("label_combinations_6")
+        self.gridLayout.addWidget(self.label_combinations_6, 0, 1, 1, 1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.lineEdit_path = QtWidgets.QLineEdit(self.groupBox_11)
+        self.lineEdit_path.setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";\n"
+"border: 2px solid rgba(39, 43, 44, 255);\n"
+"\n"
+"border-width:0.5px;\n"
+"border-radius:2.5px;\n"
+"background-color: rgb(54, 54, 54);\n"
+"color:white;\n"
+"padding:5px;\n"
+"    color:white;\n"
+"    border:0.5px solid;\n"
+"    border-color:white; \n"
+" ")
+        self.lineEdit_path.setObjectName("lineEdit_path")
+        self.horizontalLayout.addWidget(self.lineEdit_path)
+        self.pushButton_select_path = QtWidgets.QPushButton(self.groupBox_11)
+        self.pushButton_select_path.setMinimumSize(QtCore.QSize(0, 30))
+        self.pushButton_select_path.setBaseSize(QtCore.QSize(0, 30))
+        self.pushButton_select_path.setStyleSheet("QPushButton{\n"
+"border-width:0.5px;\n"
+"border-radius:2.5px;\n"
+"background-color: rgb(54, 54, 54);\n"
+"color:white;\n"
+"padding:5px;\n"
+"    color:white;\n"
+"    border:0.5px solid;\n"
+"    border-color:white; \n"
+"\n"
+"}\n"
+"QPushButton:hover{\n"
+"    \n"
+"    background-color: qradialgradient(spread:pad, cx:0.494, cy:0.517, radius:2, fx:0.5, fy:0.528, stop:0 rgba(39, 43, 44, 255), stop:1 rgba(0, 209, 166, 255));\n"
+"margin-left:1px;\n"
+"border-width:0px;\n"
+"border-style: outset;\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"    color: white;\n"
+"    size: 20;\n"
+"margin-left:10px;\n"
+"border-width:0.5px;\n"
+"border-style: outset;\n"
+"}")
+        self.pushButton_select_path.setObjectName("pushButton_select_path")
+        self.horizontalLayout.addWidget(self.pushButton_select_path)
+        self.gridLayout.addLayout(self.horizontalLayout, 1, 0, 1, 1)
+        self.comboBox_sheet_name_excel = QtWidgets.QComboBox(self.groupBox_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.comboBox_sheet_name_excel.sizePolicy().hasHeightForWidth())
+        self.comboBox_sheet_name_excel.setSizePolicy(sizePolicy)
+        self.comboBox_sheet_name_excel.setMinimumSize(QtCore.QSize(0, 30))
+        self.comboBox_sheet_name_excel.setMaximumSize(QtCore.QSize(10100, 16777215))
+        self.comboBox_sheet_name_excel.setBaseSize(QtCore.QSize(0, 40))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.comboBox_sheet_name_excel.setFont(font)
+        self.comboBox_sheet_name_excel.setStyleSheet("")
+        self.comboBox_sheet_name_excel.setObjectName("comboBox_sheet_name_excel")
+        self.gridLayout.addWidget(self.comboBox_sheet_name_excel, 1, 1, 1, 1)
+        self.gridLayout_8.addLayout(self.gridLayout, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.groupBox_11, 0, 0, 1, 1)
         self.groupBox_10 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_10.setGeometry(QtCore.QRect(20, 120, 701, 311))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -328,9 +463,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addLayout(self.verticalLayout_2)
         self.gridLayout_2.addLayout(self.horizontalLayout_2, 0, 1, 1, 1)
         self.gridLayout_7.addLayout(self.gridLayout_2, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.groupBox_10, 1, 0, 1, 1)
         self.pushButton_make_typing = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_make_typing.setEnabled(True)
-        self.pushButton_make_typing.setGeometry(QtCore.QRect(10, 450, 711, 42))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -369,168 +504,48 @@ class Ui_MainWindow(object):
 "border-width:0.5px;\n"
 "border-style: outset;\n"
 "}")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/frequency.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_make_typing.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icons/frequency.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_make_typing.setIcon(icon1)
         self.pushButton_make_typing.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_make_typing.setObjectName("pushButton_make_typing")
-        self.groupBox_11 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_11.setGeometry(QtCore.QRect(20, 10, 701, 101))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.groupBox_11.setFont(font)
-        self.groupBox_11.setStyleSheet(" QGroupBox {\n"
-"     \n"
-"     border: 2px solid gray;\n"
-"     border-radius: 5px;\n"
-"     margin-top: 1ex; /* leave space at the top for the title */\n"
-" }\n"
-"\n"
-" QGroupBox::title {\n"
-"     subcontrol-origin: margin;\n"
-"     subcontrol-position: top center; /* position at the top center */\n"
-"     padding: 0 3px;\n"
-"    color:white;\n"
-" }")
-        self.groupBox_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.groupBox_11.setFlat(False)
-        self.groupBox_11.setCheckable(False)
-        self.groupBox_11.setObjectName("groupBox_11")
-        self.gridLayout_8 = QtWidgets.QGridLayout(self.groupBox_11)
-        self.gridLayout_8.setObjectName("gridLayout_8")
-        self.gridLayout = QtWidgets.QGridLayout()
-        self.gridLayout.setObjectName("gridLayout")
-        self.label_63 = QtWidgets.QLabel(self.groupBox_11)
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_63.setFont(font)
-        self.label_63.setToolTipDuration(-1)
-        self.label_63.setStyleSheet("color:rgb(255, 255, 255);")
-        self.label_63.setScaledContents(True)
-        self.label_63.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_63.setObjectName("label_63")
-        self.gridLayout.addWidget(self.label_63, 0, 0, 1, 1)
-        self.label_combinations_6 = QtWidgets.QLabel(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_combinations_6.sizePolicy().hasHeightForWidth())
-        self.label_combinations_6.setSizePolicy(sizePolicy)
-        self.label_combinations_6.setMinimumSize(QtCore.QSize(120, 30))
-        self.label_combinations_6.setMaximumSize(QtCore.QSize(16777215, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_combinations_6.setFont(font)
-        self.label_combinations_6.setStyleSheet("QLabel{\n"
-"     padding:8px;\n"
-"padding-top:10px;\n"
-"padding-bottom:10px;\n"
-"    color:white;\n"
-"    border-left:0.5px solid;\n"
-"    border-color:white;\n"
-"\n"
-"}")
-        self.label_combinations_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_combinations_6.setObjectName("label_combinations_6")
-        self.gridLayout.addWidget(self.label_combinations_6, 0, 1, 1, 1)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.lineEdit_path = QtWidgets.QLineEdit(self.groupBox_11)
-        self.lineEdit_path.setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";\n"
-"border: 2px solid rgba(39, 43, 44, 255);\n"
-"\n"
-"border-width:0.5px;\n"
-"border-radius:2.5px;\n"
-"background-color: rgb(54, 54, 54);\n"
-"color:white;\n"
-"padding:5px;\n"
-"    color:white;\n"
-"    border:0.5px solid;\n"
-"    border-color:white; \n"
-" ")
-        self.lineEdit_path.setObjectName("lineEdit_path")
-        self.horizontalLayout.addWidget(self.lineEdit_path)
-        self.pushButton_select_path = QtWidgets.QPushButton(self.groupBox_11)
-        self.pushButton_select_path.setStyleSheet("QPushButton{\n"
-"border-width:0.5px;\n"
-"border-radius:2.5px;\n"
-"background-color: rgb(54, 54, 54);\n"
-"color:white;\n"
-"padding:5px;\n"
-"    color:white;\n"
-"    border:0.5px solid;\n"
-"    border-color:white; \n"
-"\n"
-"}\n"
-"QPushButton:hover{\n"
-"    \n"
-"    background-color: qradialgradient(spread:pad, cx:0.494, cy:0.517, radius:2, fx:0.5, fy:0.528, stop:0 rgba(39, 43, 44, 255), stop:1 rgba(0, 209, 166, 255));\n"
-"margin-left:1px;\n"
-"border-width:0px;\n"
-"border-style: outset;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    color: white;\n"
-"    size: 20;\n"
-"margin-left:10px;\n"
-"border-width:0.5px;\n"
-"border-style: outset;\n"
-"}")
-        self.pushButton_select_path.setObjectName("pushButton_select_path")
-        self.horizontalLayout.addWidget(self.pushButton_select_path)
-        self.gridLayout.addLayout(self.horizontalLayout, 1, 0, 1, 1)
-        self.comboBox_sheet_name_excel = QtWidgets.QComboBox(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.comboBox_sheet_name_excel.sizePolicy().hasHeightForWidth())
-        self.comboBox_sheet_name_excel.setSizePolicy(sizePolicy)
-        self.comboBox_sheet_name_excel.setMinimumSize(QtCore.QSize(0, 30))
-        self.comboBox_sheet_name_excel.setMaximumSize(QtCore.QSize(10100, 16777215))
-        self.comboBox_sheet_name_excel.setBaseSize(QtCore.QSize(0, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.comboBox_sheet_name_excel.setFont(font)
-        self.comboBox_sheet_name_excel.setStyleSheet("")
-        self.comboBox_sheet_name_excel.setObjectName("comboBox_sheet_name_excel")
-        self.gridLayout.addWidget(self.comboBox_sheet_name_excel, 1, 1, 1, 1)
-        self.gridLayout_8.addLayout(self.gridLayout, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.pushButton_make_typing, 2, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 765, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 761, 21))
         self.menubar.setObjectName("menubar")
+        self.menuInfo = QtWidgets.QMenu(self.menubar)
+        self.menuInfo.setObjectName("menuInfo")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.actionHakk_nda = QtWidgets.QAction(MainWindow)
+        self.actionHakk_nda.setObjectName("actionHakk_nda")
+        self.menuInfo.addAction(self.actionHakk_nda)
+        self.menubar.addAction(self.menuInfo.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.comboBox_section_name.setCurrentIndex(-1)
         self.comboBox_sheet_name_excel.setCurrentIndex(-1)
+        self.comboBox_section_name.setCurrentIndex(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.groupBox_10.setTitle(_translate("MainWindow", "TİPLENDİRME AYARLARI"))
-        self.label_combinations_5.setText(_translate("MainWindow", "KESİT İSMİ SÜTUNU"))
-        self.comboBox_section_name.setProperty("placeholderText", _translate("MainWindow", "Düşey yük kombinasyonu"))
-        self.label_combinations_8.setText(_translate("MainWindow", "TÜM SÜTUN İSİMLERİ"))
-        self.label_combinations_7.setText(_translate("MainWindow", "TİPLENDİR İÇİN SÜTUN SEÇİMİ"))
-        self.pushButton_make_typing.setText(_translate("MainWindow", "TİPLENDİR"))
         self.groupBox_11.setTitle(_translate("MainWindow", "EXCEL AYARLARI"))
         self.label_63.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#555555;\">Kesme Çatlama Dayanımı | Vcr(tonf)=0,65*fctd*bw*d*(1+ γ*Nd/Ac)</span></p></body></html>"))
         self.label_63.setText(_translate("MainWindow", "TİPLENDİRME YAPILACAK EXCEL DOSYASI"))
         self.label_combinations_6.setText(_translate("MainWindow", "EXCEL PAFTA İSMİ"))
         self.pushButton_select_path.setText(_translate("MainWindow", "SEÇ"))
         self.comboBox_sheet_name_excel.setProperty("placeholderText", _translate("MainWindow", "Düşey yük kombinasyonu"))
+        self.groupBox_10.setTitle(_translate("MainWindow", "TİPLENDİRME AYARLARI"))
+        self.label_combinations_5.setText(_translate("MainWindow", "KESİT İSMİ SÜTUNU"))
+        self.comboBox_section_name.setProperty("placeholderText", _translate("MainWindow", "Düşey yük kombinasyonu"))
+        self.label_combinations_8.setText(_translate("MainWindow", "TÜM SÜTUN İSİMLERİ"))
+        self.label_combinations_7.setText(_translate("MainWindow", "TİPLENDİR İÇİN SÜTUN SEÇİMİ"))
+        self.pushButton_make_typing.setText(_translate("MainWindow", "TİPLENDİR"))
+        self.menuInfo.setTitle(_translate("MainWindow", "Dosya"))
+        self.actionHakk_nda.setText(_translate("MainWindow", "Hakkında"))
 
 import Media.icons_rc

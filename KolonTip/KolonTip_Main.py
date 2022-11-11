@@ -22,12 +22,15 @@ class MainGUI(QMainWindow):
         
         self.ui.pushButton_select_path.pressed.connect(self.selecExcelFilePath)
         self.ui.pushButton_make_typing.pressed.connect(self.makeTypeExcel)
+        self.ui.actionHakk_nda.triggered.connect(self.showProgrammInfo)
+        
+        
         self.settings = QSettings("RufaiDemir","kolTyperSettings")
         
         self.selecExcelFilePath =None
         self.df = pandas.DataFrame()
     
-        
+    
         
     def selecExcelFilePath(self):
         try:
@@ -83,7 +86,15 @@ class MainGUI(QMainWindow):
         else:
             QMessageBox.warning(self,"UYARI","Excel doyası oluşturmak için hangi kolonlara göre tiplendirme yapılacağı seçilmeli!")
         
- 
+    def showProgrammInfo(self):
+        QMessageBox.information(self,'BİLGİLENDİRME',"""
+        Bu yazlılım kolon tiplendirme amacıyla geliştirilmiştir. Bilgi için aşağıdaki adreslerden ulaşabilirsiniz.
+        
+        İletisim Bilgileri
+        Rufai DEMİR
+        rufai.demir@yaani.com
+        0553 987 87 25
+        """)
  
 if __name__ =='__main__':
     app =QApplication(sys.argv)
